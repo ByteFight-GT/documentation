@@ -1,5 +1,5 @@
-API
-===
+Web Server
+==========
 
 .. autosummary::
    :toctree: generated

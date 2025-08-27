@@ -3,8 +3,7 @@ ByteFight Developer Documentation
 
 **ByteFight** is a game AI competition hosted by Georgia Tech.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Check out the :ref:`documentation-page` section to contribute.
 
 .. note::
 
@@ -15,5 +14,9 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   getstart
+   engine
+   webserver
+   frontend
+   client
+   docs
