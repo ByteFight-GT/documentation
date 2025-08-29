@@ -24,10 +24,11 @@ operating systems such as core usage, memory allocation, and user permissions.
 Defining a game
 ---------------
 A couple of rules when thinking of the idea for a game:
-* The game must be computable, i.e. the latest general-purpose computing CPU should be able to compute a significant number of optimal or near-optimal moves in a 5 to 10-minute time frame.
-* It must be fun. Nobody plays the game if it isn't fun.
-* The game should be computationally interesting, i.e. solutions should not be trivial.
-* The mechanics should be cohesive. Winning the game should be the sum of many parts that work together.
+
+* The game must be **computable**, i.e. the latest general-purpose computing CPU should be able to compute a significant number of optimal or near-optimal moves in a 5 to 10-minute time frame.
+* It must be **fun**. Nobody plays the game if it isn't fun.
+* The game should be **computationally interesting**, i.e. solutions should not be trivial.
+* The mechanics should be **cohesive**. Winning the game should be the sum of many parts that work together.
 
 Game simulation
 ---------------
