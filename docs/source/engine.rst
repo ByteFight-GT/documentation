@@ -1,5 +1,12 @@
 Engine
 ======
+.. toctree::
+   :maxdepth: 2
+
+   engine/classes
+   engine/running
+   engine/improvement
+
 .. contents::
 
 The *BotFightEngine* repository holds the code necessary to 
@@ -19,7 +26,7 @@ operating systems such as core usage, memory allocation, and user permissions.
 .. note::
    As ByteFight expands, the addition of GPU and/or C++ code are candidates for implementation. Familiarity with
    ``cuda``, ``pytorch``, ``pthreads``, ``ctypes``, and C++ compilation will be important 
-   during development. See `Areas for improvement`_ for more details.
+   during development. See :doc:`engine/improvement` for more details.
 
 Defining a game
 ---------------
@@ -30,41 +37,6 @@ A couple of rules when thinking of the idea for a game:
 * The game should be **computationally interesting**. Solutions should not be trivial, and the best solutions should require significant theoretical computer science knowledge.
 * The mechanics should be **cohesive**. Winning the game should be the sum of many parts that work together.
 * **Avoid gimmicks** in the mechanics. The competition exists not for the game mechanics, but to offer students a streamlined opportunity to design AI bots. Make the game fun, but avoid things that detract from rather than build toward this goal.
-
-Game simulation
----------------
-
-Timing system
-^^^^^^^^^^^^^
-
-Sandboxing
-^^^^^^^^^^^^^
-
-Hosting a game server
----------------------
-
-Connecting with the Web Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Validation
-^^^^^^^^^^
-
-Game Server optimization
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Stability issues
-^^^^^^^^^^^^^^^^
-
-Autogenerating documentation
-----------------------------
-
-
-Areas for improvement
----------------------
-Simulation speed
-^^^^^^^^^^^^^^^^
 
 
 
