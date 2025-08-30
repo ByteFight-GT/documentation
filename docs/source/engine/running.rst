@@ -1,6 +1,8 @@
 Simulating Games
 ================
 
+.. contents::
+
 Game simulation
 ---------------
 
