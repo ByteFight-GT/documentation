@@ -1,3 +1,5 @@
+.. _simulating-games:
+
 Simulating Games
 ================
 
