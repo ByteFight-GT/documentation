@@ -17,7 +17,7 @@ The game simulation is described primarily in ``gameplay.py`` and is structured 
 The reason multithreading is required is due to the potential for player timeouts, runaway recursion, 
 and the desire for information compartamentalization. 
 Each of the player processes is managed by the main process: they recieve "commands" (i.e. "initialize", "bid", "play")
-in the form of queues from the main process: see ``multiprocessing.Queue``.
+via queues from the main process: see ``multiprocessing.Queue``.
 These the player processes recieve these commands (and their corresponding arguments/data) and run the relevant
 functions with these commands
 (i.e. an "initialize" would call the constructor, a "play" would call the "play" function and return the turn the player wants to play). The 
@@ -27,6 +27,11 @@ If each player initializes properly, the board is copied by the main process and
 returns the actions they want to play and the board is mutated as such. If the game has not ended the board is copied and sent to 
 Player B's process, so on and so forth. During Player A's execution Player B's process is paused so as not to take up resources,
 and the same is true vice versa.
+
+Note that there are issues having individual processes understand what classes imported in other processes are. This is because Linux
+has shared parent process-child process memory space and Windows does not, thus reimporting and ``importlib`` and ``sys.modules``
+dependency wrangling is often necessary, see the code for more.
+
 
 Map Generation
 --------------
@@ -43,6 +48,7 @@ along with the main return of the function.
 Player timeouts are enforced via a ``queue.get`` from the main running process. If the player process does not return in the allotted time (the player's time left + extra return time),
 it is assumed the player timed out and the player process is shut down.
 
+.. _sandboxing:
 Sandboxing
 ----------
 In order to prevent overuse of resources, the following measures have been taken to sandbox user processes. Note that in the process of sandboxing, it is always easier to run code than to prevent code from being run.
