@@ -6,8 +6,8 @@ project = 'Bytefight'
 copyright = '2025, Liao'
 author = 'Liao'
 
-release = '0.1.2'
-version = '0.1.2'
+release = '0.1.3'
+version = '0.1.3'
 
 # -- General configuration
 
