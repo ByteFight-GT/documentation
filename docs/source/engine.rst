@@ -9,7 +9,7 @@ Engine
 
 .. contents::
 
-The *BotFightEngine* repository holds the code necessary to 
+The Engine repository holds the code necessary to 
 
 1. Define the game to be played along with the functions to mutate the game state.
 2. Documentation for how to play the game.
