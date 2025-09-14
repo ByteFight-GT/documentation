@@ -9,6 +9,7 @@ Code for hosting is specified in the ``server.py`` file, along with the ``Docker
 Connecting with the Web Server
 ------------------------------
 In order to make the game server capable of taking requests, it has to connect to two elements
+
 1. An online queue (we use RabbitMQ hosted on `CloudAMQP <https://www.cloudamqp.com/>`_), which allows the game server to listen for match requests, and
 2. An online storage (currently using `Google Cloud Platform <https://console.cloud.google.com/>`_), but future migration will move this onto self-hosted servers), from which user submissions are downloaded.
 

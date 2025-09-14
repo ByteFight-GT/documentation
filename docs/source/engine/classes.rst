@@ -31,6 +31,7 @@ Game Definition
 - ``game/maps.json``: A json file mapping map names to string encodings that can be parsed at runtime. Randomized elements require an outside script to parse and generate sequences, see :ref:`how games are run<simulating-games>` for more.
 - Other classes: Other classes are designed as supporting elements, typically data structures or representations of the player. These are composed in the  ``Board`` class.
 
+Note how each class has a get_copy() function implemented for fast vectorized copying of board states to enable forecasting.
 
 Testing Classes
 ---------------
