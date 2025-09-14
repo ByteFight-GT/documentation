@@ -5,7 +5,7 @@ Engine
 
    engine/classes
    engine/running
-   engine/improvement
+   engine/hosting
 
 .. contents::
 
@@ -26,7 +26,7 @@ operating systems such as core usage, memory allocation, and user permissions.
 .. note::
    As ByteFight expands, the addition of GPU and/or C++ code are candidates for implementation. Familiarity with
    ``cuda``, ``pytorch``, ``pthreads``, ``ctypes``, and C++ compilation will be important 
-   during development. See :doc:`engine/improvement` for more details.
+   during development. 
 
 Defining a game
 ---------------

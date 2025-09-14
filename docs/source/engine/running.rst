@@ -5,8 +5,6 @@ Simulating Games
 
 .. contents::
 
-Game simulation
----------------
 
 Game simulations are typically run via scripts in the ``engine/src`` folder.
 
@@ -31,13 +29,13 @@ Player B's process, so on and so forth. During Player A's execution Player B's p
 and the same is true vice versa.
 
 Map Generation
-^^^^^^^^^^^^^^
+--------------
 Map generation is done via a script. Either the map can be regenerated from a history 
 (which stores spawns as well - might be changed to a seed instead) for saving and replay, 
 or the spawns are generated via a spawning algorithm that takes in map parameters.
 
 Timing system
-^^^^^^^^^^^^^
+-------------
 On a construction or play call, one time is measured in the player process as close to the beginning of the desired function execution as possible, and another time is measured
 in the player process as soon as the desired function returns. The amount of time the function takes to return is the difference taken. This time is reported back to the main process
 along with the main return of the function.
@@ -46,7 +44,7 @@ Player timeouts are enforced via a ``queue.get`` from the main running process. 
 it is assumed the player timed out and the player process is shut down.
 
 Sandboxing
-^^^^^^^^^^
+----------
 In order to prevent overuse of resources, the following measures have been taken to sandbox user processes. Note that in the process of sandboxing, it is always easier to run code than to prevent code from being run.
 
 - Both player processes and their children remain paused while the main process is executing. The only time they are resumed is for execution of a command, after which they are immediately paused again.
@@ -57,21 +55,7 @@ In order to prevent overuse of resources, the following measures have been taken
 
 This sandboxing is only applicable to the competition server, it is not available on clients due to only being applicable on linux environments.
 
-Hosting a game server
----------------------
+Quick Testing
+-------------
+Use the ``run_game`` scripts to run different versions of the games. Text interfaces created via the :ref:`game classes<classes>` are available to see a visualization of the game in terminal, as long as the correct arguments are set.
 
-Code code for hosting is specified in the ``server.py`` file, along with the ``Dockerfile`` that executes it and the bash scripts use to build and deploy the docker container.
-
-Connecting with the Web Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Validation
-^^^^^^^^^^
-
-Deployment
-^^^^^^^^^^
-
-
-Stability issues
-^^^^^^^^^^^^^^^^
